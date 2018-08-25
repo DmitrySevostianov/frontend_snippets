@@ -1,0 +1,107 @@
+/* ---------------------------------------------------------
+  Course DEscription
+--------------------------------------------------------- */
+
+
+
+.course {
+  --pad: 20px;
+  --c--dim: #ddd;
+  
+  background: #fff;
+  display: block;
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+  transition: var(--duration) var(--ease-out);
+  transition-property: background-color, color;
+  will-change: background-color, color;
+
+  text-transform: none;
+
+}
+
+.course:focus,
+.course:hover {
+  background-color: var(--c--dim);
+  color: var(--c--action);
+}
+
+.course.card--thumb {
+  display: flex;
+}
+
+
+.course__list{
+position: relative;
+display: block;
+margin: 20px 20px 20px;
+background-color: fff;
+
+}
+
+
+/* ---------------------------------------------------------
+  Course: MEDIA
+--------------------------------------------------------- */
+
+.course__image {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  transition: var(--duration) var(--ease-out);
+  transition-property:  filter,  transform;
+  will-change:  filter, transform;
+  width: 100%;
+}
+.course:focus .course__image,
+.course:hover .course__image {
+  mix-blend-mode: multiply;
+  filter: /* blur(1px) */ grayscale(10%);
+  transform: scale(1.05);
+}
+.course__image.course__image--thumb {
+  position: static;
+}
+
+.course__media {
+  height: 0;
+  padding-top: 56.25%; /* 16x9 */
+  position: relative;
+  overflow: hidden;
+  transition: background-color var(--duration) var(--ease-out);
+}
+.course:focus .course__media,
+.course:hover .course__media {
+  background-color : var(--c--action);
+}
+.course__media.course__media--thumb {
+  flex: 0 1 200px;
+  height: auto;
+  padding: 0;
+  position: static;
+}
+
+
+.course__list {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.course__list li {
+  padding: 1em;
+  margin-bottom: .125em;
+  display: block;
+  list-style: none;
+  text-transform: none;
+}
+
+.course__list li {
+ /*background-color:  rgba(0,212,255,1);*/
+ border-radius: 10px
+}
+
+
